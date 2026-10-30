@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs" data-title-cs="Martin Palla – Aplikace" data-title-en="Martin Palla – Apps">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martin Palla – Aplikace</title>
+<meta name="description" content="Mobilní aplikace Martina Pally / Mobile apps by Martin Palla.">
+<link rel="icon" href="assets/img/dataview/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/lang.js" defer></script>
+</head>
+<body>
+
+<!-- Horní lišta s přepínačem jazyka -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">Martin Palla</a>
+    <nav>
+      <a href="#apps"><span lang="cs">Aplikace</span><span lang="en">Apps</span></a>
+      <a href="#contact"><span lang="cs">Kontakt</span><span lang="en">Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Jazyk / Language">
+      <button type="button" data-set="cs" aria-pressed="true">CS</button><button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <h1 lang="cs">Mobilní aplikace</h1>
+    <h1 lang="en">Mobile apps</h1>
+    <p class="lead" lang="cs">Vítejte. Najdete tu mé aplikace pro Android – popis, snímky obrazovky, podrobné návody a zásady ochrany soukromí.</p>
+    <p class="lead" lang="en">Welcome. Here you will find my Android apps – descriptions, screenshots, detailed guides and privacy policies.</p>
+  </section>
+
+  <!-- Přehled aplikací. Další aplikaci přidáte zkopírováním jedné <article class="card"> -->
+  <section id="apps">
+    <h2 lang="cs">Moje aplikace</h2>
+    <h2 lang="en">My apps</h2>
+
+    <div class="grid">
+
+      <!-- Karta: DataView -->
+      <article class="card">
+        <a href="dataview/"><img src="assets/img/dataview/feature.png" alt="DataView – Sensor Dashboard" width="1024" height="500" loading="lazy"></a>
+        <div class="body">
+          <h3>DataView – Sensor Dashboard</h3>
+          <p lang="cs">Přehledný dashboard pro data ze senzorů: grafy, hodnoty, upozornění. Světlý i tmavý režim.</p>
+          <p lang="en">A clear dashboard for sensor data: charts, values and alerts. Light and dark theme.</p>
+          <div class="actions">
+            <a class="btn" href="dataview/"><span lang="cs">Otevřít stránku aplikace</span><span lang="en">Open app page</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Zástupná karta pro budoucí aplikace -->
+      <article class="card soon">
+        <div class="body">
+          <h3 lang="cs">Další aplikace připravuji</h3>
+          <h3 lang="en">More apps coming</h3>
+          <p lang="cs">Sem přibudou další aplikace.</p>
+          <p lang="en">More apps will appear here.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 lang="cs">Kontakt</h2>
+    <h2 lang="en">Contact</h2>
+    <p lang="cs">Dotazy, nápady nebo hlášení chyb: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+    <p lang="en">Questions, ideas or bug reports: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Martin Palla</p>
+    <p class="small" lang="cs">Google Play a logo Google Play jsou ochranné známky společnosti Google LLC. ThingSpeak je ochranná známka společnosti The MathWorks, Inc. Uvedené aplikace nejsou s těmito společnostmi spojeny ani jimi schváleny.</p>
+    <p class="small" lang="en">Google Play and the Google Play logo are trademarks of Google LLC. ThingSpeak is a trademark of The MathWorks, Inc. The apps listed here are not affiliated with or endorsed by these companies.</p>
+  </div>
+</footer>
+
+</body>
+</html>

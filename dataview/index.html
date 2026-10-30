@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="cs" data-title-cs="DataView – Sensor Dashboard | Návod" data-title-en="DataView – Sensor Dashboard | Guide">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataView – Sensor Dashboard | Návod</title>
+<meta name="description" content="DataView – Sensor Dashboard: Android aplikace pro zobrazení dat ze senzorů. Popis, snímky obrazovky a podrobný návod / Android app for sensor data – overview, screenshots and detailed guide.">
+<link rel="icon" href="../assets/img/dataview/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/dataview/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/lang.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/dataview/favicon.png" alt="" width="28" height="28">Martin Palla</a>
+    <nav>
+      <a href="#features"><span lang="cs">Funkce</span><span lang="en">Features</span></a>
+      <a href="#screens"><span lang="cs">Snímky</span><span lang="en">Screenshots</span></a>
+      <a href="#guide"><span lang="cs">Návod</span><span lang="en">Guide</span></a>
+      <a href="#legal"><span lang="cs">Soukromí</span><span lang="en">Privacy</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Jazyk / Language">
+      <button type="button" data-set="cs" aria-pressed="true">CS</button><button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===== Úvod ===== -->
+  <section class="hero">
+    <img class="hero-img" src="../assets/img/dataview/feature.png" alt="DataView – Sensor Dashboard" width="1024" height="500">
+    <h1 style="margin-top:20px">DataView – Sensor Dashboard</h1>
+    <p class="lead" lang="cs">Android aplikace, která z vašich senzorů dělá přehledný dashboard: grafy, aktuální hodnoty a upozornění na jednom místě.</p>
+    <p class="lead" lang="en">An Android app that turns your sensor data into a clear dashboard: charts, current values and alerts in one place.</p>
+    <!-- Odkaz do Google Play (jen textové tlačítko – oficiální odznak se používá jen dle pravidel Google) -->
+    <a class="btn" href="https://play.google.com/store/apps/details?id=cz.palla.dataview" rel="noopener"><span lang="cs">Stáhnout na Google Play</span><span lang="en">Get it on Google Play</span></a>
+    <a class="btn secondary" href="#guide"><span lang="cs">Přejít na návod</span><span lang="en">Go to the guide</span></a>
+  </section>
+
+  <!-- ===== Funkce ===== -->
+  <section id="features">
+    <h2 lang="cs">Co aplikace umí</h2><h2 lang="en">What the app does</h2>
+    <div class="features">
+      <div class="feature"><h3 lang="cs">Přehled zařízení</h3><h3 lang="en">Device overview</h3>
+        <p lang="cs">Zdroje, zařízení a veličiny na jednom místě – ThingSpeak, MQTT i vlastní REST API.</p><p lang="en">Sources, devices and quantities in one place – ThingSpeak, MQTT and custom REST API.</p></div>
+      <div class="feature"><h3 lang="cs">Detail veličiny</h3><h3 lang="en">Quantity detail</h3>
+        <p lang="cs">Graf průběhu, aktuální hodnota a historie měření.</p><p lang="en">Chart of the trend, current value and measurement history.</p></div>
+      <div class="feature"><h3 lang="cs">Vlastní dashboard</h3><h3 lang="en">Custom dashboard</h3>
+        <p lang="cs">Skládejte widgety (grafy a další) podle sebe pomocí editoru.</p><p lang="en">Build your own layout from widgets (charts and more) using the editor.</p></div>
+      <div class="feature"><h3 lang="cs">Alarmy</h3><h3 lang="en">Alarms</h3>
+        <p lang="cs">Upozornění, když hodnota překročí nastavenou mez.</p><p lang="en">Get notified when a value crosses a limit you set.</p></div>
+      <div class="feature"><h3 lang="cs">Světlý a tmavý režim</h3><h3 lang="en">Light and dark theme</h3>
+        <p lang="cs">Vzhled Material 3, který respektuje nastavení telefonu.</p><p lang="en">Material 3 design that follows your phone settings.</p></div>
+      <div class="feature"><h3 lang="cs">Více jazyků</h3><h3 lang="en">Multiple languages</h3>
+        <p lang="cs">Čeština, slovenština, němčina a angličtina.</p><p lang="en">Czech, Slovak, German and English.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== Snímky obrazovky ===== -->
+  <section id="screens">
+    <h2 lang="cs">Snímky obrazovky</h2><h2 lang="en">Screenshots</h2>
+    <div class="gallery">
+      <figure><img src="../assets/img/dataview/s1-prehled-tmavy.webp" alt="" width="540" height="960" loading="lazy"><figcaption lang="cs">Přehled (tmavý)</figcaption><figcaption lang="en">Overview (dark)</figcaption></figure>
+      <figure><img src="../assets/img/dataview/s5-prehled-svetly.webp" alt="" width="540" height="960" loading="lazy"><figcaption lang="cs">Přehled (světlý)</figcaption><figcaption lang="en">Overview (light)</figcaption></figure>
+      <figure><img src="../assets/img/dataview/s2-zdroj-detail.webp" alt="" width="540" height="960" loading="lazy"><figcaption lang="cs">Detail zařízení</figcaption><figcaption lang="en">Device detail</figcaption></figure>
+      <figure><img src="../assets/img/dataview/s6-detail-veliciny.webp" alt="" width="540" height="960" loading="lazy"><figcaption lang="cs">Detail veličiny</figcaption><figcaption lang="en">Quantity detail</figcaption></figure>
+      <figure><img src="../assets/img/dataview/s4-grafy.webp" alt="" width="540" height="960" loading="lazy"><figcaption lang="cs">Dashboard s grafy</figcaption><figcaption lang="en">Dashboard with charts</figcaption></figure>
+      <figure><img src="../assets/img/dataview/s3-uprava-widgetu.webp" alt="" width="540" height="960" loading="lazy"><figcaption lang="cs">Editor widgetu</figcaption><figcaption lang="en">Widget editor</figcaption></figure>
+    </div>
+    <p class="small muted" lang="cs">Snímky obsahují ukázková testovací data.</p>
+    <p class="small muted" lang="en">Screenshots contain sample test data.</p>
+  </section>
+
+  <!-- ===== Návod ===== -->
+  <section id="guide">
+    <h2 lang="cs">Návod k použití</h2><h2 lang="en">User guide</h2>
+
+    <nav class="toc" aria-label="Obsah / Contents">
+      <strong lang="cs">Obsah – vyberte, co hledáte:</strong><strong lang="en">Contents – pick what you need:</strong>
+      <ul>
+        <li><a href="#g-start"><span lang="cs">1. Začínáme a základní pojmy</span><span lang="en">1. Getting started and key terms</span></a></li>
+        <li><a href="#g-source"><span lang="cs">2. Záložka Zdroje dat</span><span lang="en">2. The Data sources tab</span></a></li>
+        <li><a href="#g-dash"><span lang="cs">3. Záložka Přehled a widgety</span><span lang="en">3. The Overview tab and widgets</span></a></li>
+        <li><a href="#g-field"><span lang="cs">4. Detail veličiny (graf)</span><span lang="en">4. Quantity detail (chart)</span></a></li>
+        <li><a href="#g-alarm"><span lang="cs">5. Alarmy</span><span lang="en">5. Alarms</span></a></li>
+        <li><a href="#g-pro"><span lang="cs">6. Reklamy, PRO a souhlas</span><span lang="en">6. Ads, PRO and consent</span></a></li>
+        <li><a href="#g-settings"><span lang="cs">7. Nastavení a soukromí</span><span lang="en">7. Settings and privacy</span></a></li>
+        <li><a href="#g-trouble"><span lang="cs">8. Řešení potíží</span><span lang="en">8. Troubleshooting</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- ---------- 1 ---------- -->
+    <details id="g-start" open>
+      <summary><span lang="cs">1. Začínáme a základní pojmy</span><span lang="en">1. Getting started and key terms</span></summary>
+      <div lang="cs">
+        <h4>Jak je aplikace uspořádaná</h4>
+        <p>Dole na obrazovce jsou tři záložky:</p>
+        <ul>
+          <li><strong>Přehled</strong> – vaše nástěnky (přehledy) složené z widgetů. Tady data sledujete.</li>
+          <li><strong>Zdroje dat</strong> – odkud se data berou: zdroje, jejich zařízení a veličiny. Tady data připojujete.</li>
+          <li><strong>Nastavení</strong> – vzhled, jazyk, synchronizace, PRO, soukromí.</li>
+        </ul>
+        <h4>Základní pojmy</h4>
+        <ul>
+          <li><strong>Zdroj dat</strong> – server, odkud se data stahují (ThingSpeak, MQTT broker nebo vlastní REST API).</li>
+          <li><strong>Zařízení</strong> – například jeden váš senzor nebo kanál; patří do zdroje.</li>
+          <li><strong>Veličina</strong> – jedna měřená hodnota zařízení (teplota, vlhkost, hmotnost…).</li>
+          <li><strong>Přehled</strong> – jedna nástěnka. Můžete jich mít víc (např. „Včely“, „Zahrada“).</li>
+          <li><strong>Widget</strong> – karta na přehledu, která ukazuje veličinu (hodnotu, graf, měřidlo…).</li>
+        </ul>
+        <p>Cesta dat tedy je: <strong>zdroj → zařízení → veličina → widget na přehledu</strong>.</p>
+        <h4>První kroky</h4>
+        <ol>
+          <li>Při prvním spuštění vyberte jazyk. Může se zobrazit i okno se souhlasem k reklamám a dotaz na anonymní statistiky – odpovězte podle svého uvážení (viz kapitola 6).</li>
+          <li>V záložce <strong>Zdroje dat</strong> přidejte první zdroj (kapitola 2).</li>
+          <li>V záložce <strong>Přehled</strong> vytvořte přehled a přidejte widgety (kapitola 3).</li>
+        </ol>
+        <div class="note">Aplikace obsahuje krátkého průvodce prvními kroky. Znovu ho spustíte v Nastavení.</div>
+      </div>
+      <div lang="en">
+        <h4>How the app is organised</h4>
+        <p>There are three tabs at the bottom of the screen:</p>
+        <ul>
+          <li><strong>Overview</strong> – your boards (dashboards) built from widgets. This is where you watch your data.</li>
+          <li><strong>Data sources</strong> – where the data comes from: sources, their devices and quantities. This is where you connect data.</li>
+          <li><strong>Settings</strong> – look, language, synchronisation, PRO, privacy.</li>
+        </ul>
+        <h4>Key terms</h4>
+        <ul>
+          <li><strong>Data source</strong> – the server the data is downloaded from (ThingSpeak, an MQTT broker or a custom REST API).</li>
+          <li><strong>Device</strong> – e.g. one of your sensors or channels; it belongs to a source.</li>
+          <li><strong>Quantity</strong> – one measured value of a device (temperature, humidity, weight…).</li>
+          <li><strong>Dashboard</strong> (“Přehled” in Czech) – one board. You can have several (e.g. “Bees”, “Garden”).</li>
+          <li><strong>Widget</strong> – a card on a dashboard that shows a quantity (value, chart, gauge…).</li>
+        </ul>
+        <p>So the data flows: <strong>source → device → quantity → widget on a dashboard</strong>.</p>
+        <h4>First steps</h4>
+        <ol>
+          <li>On first launch pick your language. A consent dialog for ads and a question about anonymous statistics may also appear – answer as you prefer (see chapter 6).</li>
+          <li>In the <strong>Data sources</strong> tab add your first source (chapter 2).</li>
+          <li>In the <strong>Overview</strong> tab create a dashboard and add widgets (chapter 3).</li>
+        </ol>
+        <div class="note">The app has a short first-steps walkthrough. You can start it again in Settings.</div>
+      </div>
+    </details>
+
+    <!-- ---------- 2 ---------- -->
+    <details id="g-source">
+      <summary><span lang="cs">2. Záložka Zdroje dat</span><span lang="en">2. The Data sources tab</span></summary>
+      <div lang="cs">
+        <h4>Přidání zdroje</h4>
+        <ol>
+          <li>Otevřete záložku <strong>Zdroje dat</strong> a klepněte na <strong>+</strong> (nebo „Přidat zdroj“).</li>
+          <li><strong>Typ zdroje:</strong> ThingSpeak (veřejný nebo soukromý kanál), MQTT (zařízení posílající data přes broker) nebo Vlastní REST API.</li>
+          <li><strong>Připojení:</strong> u ThingSpeaku zadejte ID kanálu a u soukromého kanálu i Read API Key (najdete ho na webu ThingSpeak v nastavení kanálu, sekce API Keys). Klepnutím na „Otestovat připojení“ ověříte, že to funguje.</li>
+          <li>Zaškrtněte <strong>veličiny</strong>, které chcete sledovat, a případně upravte jejich název a jednotku.</li>
+          <li>Pojmenujte zařízení, zvolte, kolik historie stáhnout (7 dní, 30 dní, 6 měsíců, rok nebo vše), a klepněte na <strong>Uložit a stáhnout data</strong>.</li>
+        </ol>
+        <div class="note">Read API Key nikomu nesdělujte. Aplikace ho používá jen ke čtení dat vašeho kanálu.</div>
+        <h4>Správa zdrojů a zařízení</h4>
+        <ul>
+          <li>V seznamu vidíte zdroje a jejich zařízení. Klepnutím na zařízení otevřete jeho <strong>detail zařízení</strong>: seznam veličin (každou lze zapnout/vypnout), přejmenování zařízení, nastavení veličiny (např. počet desetinných míst) a údaje o uložených datech.</li>
+          <li><strong>Synchronizovat</strong> – ikona synchronizace stáhne nová data.</li>
+          <li><strong>Dostáhnout starší data</strong> – doplní historii starší než nejstarší záznam, který už máte.</li>
+          <li><strong>Odebrat zdroj</strong> – smaže zdroj včetně zařízení, uložených měření a poznámek. Akci nelze vrátit zpět.</li>
+        </ul>
+      </div>
+      <div lang="en">
+        <h4>Adding a source</h4>
+        <ol>
+          <li>Open the <strong>Data sources</strong> tab and tap <strong>+</strong> (or “Add source”).</li>
+          <li><strong>Source type:</strong> ThingSpeak (public or private channel), MQTT (devices sending data through a broker) or Custom REST API.</li>
+          <li><strong>Connection:</strong> for ThingSpeak enter the channel ID, and for a private channel also the Read API Key (find it on the ThingSpeak website in the channel settings, API Keys section). Tap “Test connection” to check it works.</li>
+          <li>Tick the <strong>quantities</strong> you want to follow and adjust their names and units if needed.</li>
+          <li>Name the device, choose how much history to download (7 days, 30 days, 6 months, 1 year or everything) and tap <strong>Save and download data</strong>.</li>
+        </ol>
+        <div class="note">Do not share your Read API Key. The app uses it only to read your channel's data.</div>
+        <h4>Managing sources and devices</h4>
+        <ul>
+          <li>The list shows your sources and their devices. Tap a device to open its <strong>device detail</strong>: the list of quantities (each can be switched on/off), renaming the device, quantity settings (e.g. number of decimals) and information about stored data.</li>
+          <li><strong>Synchronise</strong> – the sync icon downloads new data.</li>
+          <li><strong>Download older data</strong> – fills in history older than the oldest record you already have.</li>
+          <li><strong>Remove source</strong> – deletes the source with its devices, stored measurements and notes. This cannot be undone.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- ---------- 3 ---------- -->
+    <details id="g-dash">
+      <summary><span lang="cs">3. Záložka Přehled a widgety</span><span lang="en">3. The Overview tab and widgets</span></summary>
+      <div lang="cs">
+        <h4>Přehledy (nástěnky)</h4>
+        <ul>
+          <li>Klepnutím na <strong>+</strong> v horní liště vytvoříte nový přehled. Od druhého přehledu se nahoře zobrazí záložky; mezi přehledy lze přepínat i tažením do strany.</li>
+          <li>Ikona <strong>⋮</strong> (Možnosti přehledu) umožňuje přehled přejmenovat, posunout doleva/doprava nebo smazat. Smazáním přehledu se nesmažou uložená měření.</li>
+          <li>Ikona synchronizace stáhne nová data; pod lištou vidíte čas poslední synchronizace.</li>
+        </ul>
+        <h4>Klepnutí na widget</h4>
+        <p>Když <strong>nejste v režimu úprav</strong>, klepnutím na widget otevřete <strong>detail jeho veličiny</strong> (graf, statistiky, poznámky – viz kapitola 4). Widget událostí otevře seznam poznámek a událostí, kombinovaný graf se otevře zvětšený.</p>
+        <h4>Přidání widgetu</h4>
+        <ol>
+          <li>Na přehledu klepněte na ikonu <strong>tužky</strong> (Upravit přehled) – zapne se <strong>režim úprav</strong>.</li>
+          <li>Klepněte na tlačítko <strong>+</strong> v pravém dolním rohu.</li>
+          <li>V okně „Přidat widget“ zvolte <strong>typ widgetu</strong>, <strong>zařízení</strong> a <strong>veličinu</strong>; podle typu nastavte období, vzhled, šířku (ze 4 sloupců) a výšku.</li>
+          <li>Uložte. Režim úprav ukončíte klepnutím na <strong>✓</strong>.</li>
+        </ol>
+        <div class="note">Pokud v seznamu nejsou žádná zařízení, nejdřív přidejte zdroj dat (kapitola 2).</div>
+        <h4>Úprava, přesunutí a odebrání widgetu</h4>
+        <p>Zapněte <strong>režim úprav</strong> (tužka). V něm:</p>
+        <ul>
+          <li><strong>klepnutím na widget</strong> otevřete okno „Upravit widget“ (nastavení typu, veličiny, vzhledu, alarmu),</li>
+          <li>šipkami <strong>‹ ›</strong> v rohu widgetu ho přesunete,</li>
+          <li>křížkem <strong>×</strong> ho odeberete z přehledu (uložená data se tím nezmění).</li>
+        </ul>
+        <h4>Typy widgetů</h4>
+        <p>Hodnota, Hodnota + změna, Graf, Statistiky, Porovnání období, Události, Kombinovaný graf, Trendový ukazatel, Mini-trend, Porovnávací sloupce, Tachograf, Progress Bar, Stavová LED, Odchylkový ukazatel, G-metr a Kompasový ukazatel. Kombinovaný graf, Mini-trend a Odchylkový ukazatel patří mezi <strong>PRO prvky</strong> (kapitola 6) a mají na kartě štítek „PRO“.</p>
+      </div>
+      <div lang="en">
+        <h4>Dashboards (boards)</h4>
+        <ul>
+          <li>Tap <strong>+</strong> in the top bar to create a new dashboard. Tabs appear at the top from the second dashboard on; you can also switch by swiping sideways.</li>
+          <li>The <strong>⋮</strong> icon (Dashboard options) lets you rename the dashboard, move it left/right or delete it. Deleting a dashboard does not delete the stored measurements.</li>
+          <li>The sync icon downloads new data; below the bar you can see the time of the last synchronisation.</li>
+        </ul>
+        <h4>Tapping a widget</h4>
+        <p>When you are <strong>not in edit mode</strong>, tapping a widget opens the <strong>detail of its quantity</strong> (chart, statistics, notes – see chapter 4). An Events widget opens the list of notes and events, a combined chart opens enlarged.</p>
+        <h4>Adding a widget</h4>
+        <ol>
+          <li>On the dashboard tap the <strong>pencil</strong> icon (Edit dashboard) – this turns on <strong>edit mode</strong>.</li>
+          <li>Tap the <strong>+</strong> button in the bottom-right corner.</li>
+          <li>In the “Add widget” window choose the <strong>widget type</strong>, <strong>device</strong> and <strong>quantity</strong>; depending on the type set the period, look, width (out of 4 columns) and height.</li>
+          <li>Save. Leave edit mode by tapping <strong>✓</strong>.</li>
+        </ol>
+        <div class="note">If the list shows no devices, add a data source first (chapter 2).</div>
+        <h4>Editing, moving and removing a widget</h4>
+        <p>Turn on <strong>edit mode</strong> (pencil). While in it:</p>
+        <ul>
+          <li><strong>tap a widget</strong> to open the “Edit widget” window (type, quantity, look, alarm),</li>
+          <li>use the <strong>‹ ›</strong> arrows in the widget's corner to move it,</li>
+          <li>use the <strong>×</strong> to remove it from the dashboard (stored data is not changed).</li>
+        </ul>
+        <h4>Widget types</h4>
+        <p>Value, Value + change, Chart, Statistics, Period comparison, Events, Combined chart, Trend indicator, Sparkline, Comparison bars, Gauge, Progress bar, Status LED, Deviation meter, G-meter and Compass dial. Combined chart, Sparkline and Deviation meter are <strong>PRO elements</strong> (chapter 6) and carry a “PRO” badge on the card.</p>
+      </div>
+    </details>
+
+    <!-- ---------- 4 ---------- -->
+    <details id="g-field">
+      <summary><span lang="cs">4. Detail veličiny (graf)</span><span lang="en">4. Quantity detail (chart)</span></summary>
+      <div lang="cs">
+        <p>Detail otevřete klepnutím na widget na přehledu (mimo režim úprav). Najdete v něm:</p>
+        <ul>
+          <li><strong>graf průběhu</strong> s volbou období a osy Y,</li>
+          <li>změnu oproti předchozímu měření nebo oproti průměru posledních měření,</li>
+          <li>tlačítka <strong>předchozí / další bod</strong> pro procházení jednotlivých hodnot,</li>
+          <li><strong>statistiky</strong> období: minimum, maximum, průměr, medián, změna a počet měření,</li>
+          <li><strong>porovnání</strong> s předchozím obdobím,</li>
+          <li><strong>trend</strong> (odchylka od průměru předchozího okna) – okno trendu lze přepínat,</li>
+          <li><strong>poznámky a události</strong>: klepnutím do grafu vyberete místo a přidáte poznámku. Poznámka může platit v jednom okamžiku nebo v časovém rozsahu a pro jednu veličinu nebo celé zařízení.</li>
+        </ul>
+        <h4>Ignorování chybných měření</h4>
+        <p>V poznámce lze zvolit „Ignorovat toto měření“ – hodnota se přestane zobrazovat v grafu a nepočítá se do průměrů. Ignorovaná měření najdete přes ikonu v detailu a můžete je kdykoli vrátit zpět.</p>
+      </div>
+      <div lang="en">
+        <p>Open the detail by tapping a widget on the dashboard (outside edit mode). It contains:</p>
+        <ul>
+          <li>a <strong>trend chart</strong> with a choice of period and Y axis,</li>
+          <li>the change compared with the previous measurement or with the average of the last measurements,</li>
+          <li><strong>previous / next point</strong> buttons for stepping through individual values,</li>
+          <li><strong>statistics</strong> for the period: minimum, maximum, average, median, change and number of measurements,</li>
+          <li><strong>comparison</strong> with the previous period,</li>
+          <li><strong>trend</strong> (deviation from the average of the preceding window) – the trend window can be switched,</li>
+          <li><strong>notes and events</strong>: tap the chart to pick a spot and add a note. A note can apply to a single moment or to a time range, and to one quantity or the whole device.</li>
+        </ul>
+        <h4>Ignoring bad measurements</h4>
+        <p>In a note you can choose “Ignore this measurement” – the value disappears from the chart and is not counted in averages. Ignored measurements are listed via an icon in the detail and can be restored at any time.</p>
+      </div>
+    </details>
+
+    <!-- ---------- 5 ---------- -->
+    <details id="g-alarm">
+      <summary><span lang="cs">5. Alarmy</span><span lang="en">5. Alarms</span></summary>
+      <div lang="cs">
+        <h4>Nastavení alarmu</h4>
+        <ol>
+          <li>Zapněte režim úprav (tužka) a klepněte na widget – otevře se „Upravit widget“.</li>
+          <li>V sekci <strong>Alarm</strong> zapněte „Upozornit při překročení rozsahu“.</li>
+          <li>Vyplňte <strong>minimum</strong> a/nebo <strong>maximum</strong>. Prázdné pole znamená, že v daném směru není omezení.</li>
+          <li>Uložte. Povolte oznámení, pokud o to Android požádá.</li>
+        </ol>
+        <p>Když hodnota vypadne z rozsahu, přijde <strong>oznámení</strong> a okraj widgetu <strong>bliká</strong>. Na kartě je ikona zvonečku: prázdný = alarm hlídá, plný červený = alarm právě platí. U trendových widgetů hlídá alarm <em>trend</em> (pokles zapisujte se znaménkem mínus, např. minimum -5).</p>
+        <h4>Kontrola na pozadí (experimentální)</h4>
+        <p>V Nastavení lze zapnout „Kontrolovat alarmy i na pozadí“. Aplikace se pak přibližně každých 15 minut pokusí připojit a alarmy zkontrolovat, i když je zavřená. Stojí to baterii a data.</p>
+        <div class="note"><strong>Důležité:</strong> Android a zejména výrobci telefonů (Xiaomi, Huawei, OPPO, Vivo, OnePlus, částečně i Samsung) aplikace na pozadí často uspávají nebo vypínají. Obvykle pomůže u aplikace v nastavení baterie zvolit „Bez omezení“, povolit „Autostart“ nebo aplikaci v přehledu spuštěných aplikací „zamknout“. <strong>Ne všechny telefony to ale umožňují, a proto nelze spolehlivé doručení upozornění na pozadí zaručit.</strong> Alarmy proto nepoužívejte jako jediné zabezpečení kritických situací.</div>
+      </div>
+      <div lang="en">
+        <h4>Setting an alarm</h4>
+        <ol>
+          <li>Turn on edit mode (pencil) and tap a widget – “Edit widget” opens.</li>
+          <li>In the <strong>Alarm</strong> section switch on “Notify when out of range”.</li>
+          <li>Fill in the <strong>minimum</strong> and/or <strong>maximum</strong>. An empty field means no limit in that direction.</li>
+          <li>Save. Allow notifications if Android asks.</li>
+        </ol>
+        <p>When the value leaves the range you get a <strong>notification</strong> and the widget's border <strong>blinks</strong>. The card shows a bell icon: outlined = the alarm is watching, filled red = the alarm is active right now. On trend widgets the alarm watches the <em>trend</em> (write a drop with a minus sign, e.g. minimum -5).</p>
+        <h4>Background checks (experimental)</h4>
+        <p>In Settings you can switch on “Check alarms in the background”. The app then tries about every 15 minutes to connect and check alarms even when it is closed. This costs battery and data.</p>
+        <div class="note"><strong>Important:</strong> Android, and especially phone makers (Xiaomi, Huawei, OPPO, Vivo, OnePlus, partly Samsung), often put background apps to sleep or shut them down. It usually helps to set the app's battery option to “Unrestricted”, allow “Autostart” or “lock” the app in the recent-apps view. <strong>However, not all phones allow this, so reliable delivery of background alerts cannot be guaranteed.</strong> Do not rely on alarms as the only safeguard for critical situations.</div>
+      </div>
+    </details>
+
+    <!-- ---------- 6 ---------- -->
+    <details id="g-pro">
+      <summary><span lang="cs">6. Reklamy, PRO a souhlas</span><span lang="en">6. Ads, PRO and consent</span></summary>
+      <div lang="cs">
+        <h4>Jak funguje bezplatná verze</h4>
+        <p>Všechny funkce jsou dostupné zdarma, nic není zamčené. Za bezplatné používání se čas od času zobrazí <strong>jedna krátká odměněná reklama</strong> („Krátká pauza na reklamu“). Reklama se zobrazí, když:</p>
+        <ul>
+          <li>uplyne <strong>30 minut aktivního používání</strong> (počítá se jen čas, kdy je aplikace otevřená na obrazovce), nebo</li>
+          <li>uplyne <strong>7 dní</strong> od poslední zhlédnuté reklamy.</li>
+        </ul>
+        <p>Po zhlédnutí reklamy <strong>do konce</strong> se čas vynuluje a můžete dál používat aplikaci. Když reklamu zavřete předčasně, zobrazí se znovu (nejvýše třikrát). Pokud se reklamu nepodaří zobrazit (nedostupná, chybí internet), počkáte jen 15 sekund.</p>
+        <h4>PRO prvky a zkrácení limitu</h4>
+        <p>PRO prvky jsou: <strong>alarm, kombinovaný graf, odchylkový ukazatel a mini-trend</strong>. Můžete jich používat <strong>libovolný počet</strong> – žádný limit na počet neexistuje. Každý použitý PRO prvek ale limit do další reklamy zkracuje:</p>
+        <ul>
+          <li>o <strong>10 %</strong> z 30 minut (tedy o 3 minuty) a zároveň o 10 % ze 7 dní,</li>
+          <li>počítá se každý použitý prvek na všech přehledech (např. 3 widgety s alarmem + 2 kombinované grafy = 5 prvků = limit zkrácen o 50 %, tedy na 15 minut),</li>
+          <li>limit <strong>nikdy neklesne pod 5 minut a pod 1 den</strong> – další prvky už jej nezkracují.</li>
+        </ul>
+        <p>Aktuální stav (počet použitých PRO prvků a zbývající volný čas) vidíte v Nastavení v sekci PRO.</p>
+        <h4>PRO verze (jednorázový nákup)</h4>
+        <p>Nákupem <strong>PRO</strong> v Google Play (jednorázově, bez předplatného) zmizí <strong>reklamy i zkracování limitu</strong>. Dřívější nákup lze na stejném účtu Google obnovit tlačítkem „Obnovit dřívější nákup“ v Nastavení.</p>
+        <h4>Co když nedám souhlas s reklamami?</h4>
+        <ul>
+          <li>Souhlas se zpracováním údajů pro reklamy (okno Google, zobrazuje se hlavně v EU, EHP a Velké Británii) <strong>neomezuje používání žádného prvku aplikace</strong>. Všechny funkce fungují dál.</li>
+          <li>Pravidla zůstávají stejná: reklama se zobrazí po stejných 30 minutách / 7 dnech. Mění se jen druh reklamy – bez souhlasu je <strong>nepersonalizovaná</strong> (a méně relevantní).</li>
+          <li>Pokud reklamu nelze zobrazit (nedostatek nabídky, chybí internet), stačí 15 sekund počkat.</li>
+          <li>Souhlas můžete kdykoli změnit v Nastavení → <em>Možnosti soukromí a reklam</em> (položka se zobrazuje, pokud se na vás vztahuje).</li>
+          <li>Souhlas s anonymními statistikami a hlášením chyb je samostatný a také nemá vliv na funkce aplikace.</li>
+        </ul>
+      </div>
+      <div lang="en">
+        <h4>How the free version works</h4>
+        <p>All features are available for free, nothing is locked. In return, <strong>one short rewarded ad</strong> is shown from time to time (“Short break for an ad”). It appears when:</p>
+        <ul>
+          <li><strong>30 minutes of active use</strong> have passed (only time with the app open on screen counts), or</li>
+          <li><strong>7 days</strong> have passed since the last ad you watched.</li>
+        </ul>
+        <p>After watching the ad <strong>to the end</strong> the timer resets and you can keep using the app. If you close the ad early, it is shown again (at most three times). If the ad cannot be shown (unavailable, no internet), you simply wait 15 seconds.</p>
+        <h4>PRO elements and the shorter limit</h4>
+        <p>PRO elements are: <strong>alarm, combined chart, deviation meter and sparkline</strong>. You can use <strong>any number</strong> of them – there is no cap on how many. Every PRO element in use, however, shortens the limit until the next ad:</p>
+        <ul>
+          <li>by <strong>10 %</strong> of 30 minutes (i.e. 3 minutes) and also by 10 % of the 7 days,</li>
+          <li>each element in use counts across all dashboards (e.g. 3 widgets with an alarm + 2 combined charts = 5 elements = limit shortened by 50 %, i.e. to 15 minutes),</li>
+          <li>the limit <strong>never drops below 5 minutes and 1 day</strong> – further elements no longer shorten it.</li>
+        </ul>
+        <p>The current status (number of PRO elements in use and the remaining free time) is shown in Settings in the PRO section.</p>
+        <h4>PRO version (one-time purchase)</h4>
+        <p>Buying <strong>PRO</strong> in Google Play (one-time, no subscription) removes <strong>the ads and the shortening of the limit</strong>. An earlier purchase can be restored on the same Google account with “Restore previous purchase” in Settings.</p>
+        <h4>What if I do not consent to ads?</h4>
+        <ul>
+          <li>Consent to data processing for ads (a Google dialog, shown mainly in the EU, EEA and UK) <strong>does not restrict any feature of the app</strong>. Everything keeps working.</li>
+          <li>The rules stay the same: the ad appears after the same 30 minutes / 7 days. Only the kind of ad changes – without consent it is <strong>non-personalised</strong> (and less relevant).</li>
+          <li>If no ad can be shown (no inventory, no internet), you just wait 15 seconds.</li>
+          <li>You can change your choice at any time in Settings → <em>Privacy and ads options</em> (shown if it applies to you).</li>
+          <li>Consent to anonymous statistics and crash reports is separate and does not affect the app's features either.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- ---------- 7 ---------- -->
+    <details id="g-settings">
+      <summary><span lang="cs">7. Nastavení a soukromí</span><span lang="en">7. Settings and privacy</span></summary>
+      <div lang="cs">
+        <ul>
+          <li><strong>Jazyk a motiv:</strong> čeština, slovenština, němčina, angličtina; motiv Auto / Světlý / Tmavý.</li>
+          <li><strong>Synchronizace:</strong> při spuštění, při návratu z pozadí a automaticky každých X minut (jen dokud je aplikace otevřená). Zdroje MQTT se připojují při spuštění vždy.</li>
+          <li><strong>Alarmy na pozadí:</strong> experimentální volba, viz kapitola 5.</li>
+          <li><strong>PRO:</strong> stav limitu, nákup a obnovení nákupu.</li>
+          <li><strong>Anonymní statistiky a hlášení chyb:</strong> dobrovolné, můžete je kdykoli vypnout.</li>
+          <li><strong>Úložiště:</strong> velikost databáze a počty měření a poznámek. Data jsou uložena v telefonu.</li>
+          <li><strong>O aplikaci → Licence:</strong> licence použitých knihoven.</li>
+          <li><strong>Nápověda:</strong> znovu spustí průvodce prvními kroky.</li>
+        </ul>
+        <p>Podrobnosti najdete v <a href="https://martasecek-dotcom.github.io/privacy-policy-DataView/">zásadách ochrany soukromí</a>.</p>
+      </div>
+      <div lang="en">
+        <ul>
+          <li><strong>Language and theme:</strong> Czech, Slovak, German, English; theme Auto / Light / Dark.</li>
+          <li><strong>Synchronisation:</strong> on launch, on return from the background and automatically every X minutes (only while the app is open). MQTT sources always connect at launch.</li>
+          <li><strong>Background alarms:</strong> an experimental option, see chapter 5.</li>
+          <li><strong>PRO:</strong> limit status, purchase and restoring a purchase.</li>
+          <li><strong>Anonymous statistics and crash reports:</strong> optional, you can switch them off at any time.</li>
+          <li><strong>Storage:</strong> database size and counts of measurements and notes. Data is stored on your phone.</li>
+          <li><strong>About → Licences:</strong> licences of the libraries used.</li>
+          <li><strong>Help:</strong> restarts the first-steps walkthrough.</li>
+        </ul>
+        <p>See the <a href="https://martasecek-dotcom.github.io/privacy-policy-DataView/">privacy policy</a> for details.</p>
+      </div>
+    </details>
+
+    <!-- ---------- 8 ---------- -->
+    <details id="g-trouble">
+      <summary><span lang="cs">8. Řešení potíží</span><span lang="en">8. Troubleshooting</span></summary>
+      <div lang="cs">
+        <h4>Nevidím žádná data</h4>
+        <ul>
+          <li>Zkontrolujte připojení k internetu.</li>
+          <li>V záložce Zdroje dat ověřte ID kanálu; u soukromého kanálu i Read API Key (zdroj lze otestovat při přidávání).</li>
+          <li>Zkontrolujte, že senzor skutečně odesílá data do kanálu (např. na webu ThingSpeak).</li>
+          <li>Pokud widget hlásí „Veličina nebyla nastavena“, v režimu úprav na něj klepněte a vyberte veličinu.</li>
+        </ul>
+        <h4>Hodnoty jsou staré</h4>
+        <p>Klepněte na ikonu synchronizace. Stáří dat závisí i na tom, jak často senzor odesílá měření. Automatickou synchronizaci nastavíte v Nastavení.</p>
+        <h4>Nepřichází upozornění</h4>
+        <p>Zkontrolujte, že má widget zapnutý alarm a aplikace smí posílat oznámení. Pro kontrolu na pozadí viz kapitola 5 (u některých telefonů ji nelze zaručit).</p>
+        <h4>Nákup PRO se neprojevil</h4>
+        <p>Ověřte, že jste přihlášeni stejným účtem Google, a v Nastavení klepněte na „Obnovit dřívější nákup“.</p>
+        <p>Nepomohlo? Napište na <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a>.</p>
+      </div>
+      <div lang="en">
+        <h4>I see no data</h4>
+        <ul>
+          <li>Check your internet connection.</li>
+          <li>In the Data sources tab verify the channel ID; for a private channel also the Read API Key (you can test a source while adding it).</li>
+          <li>Make sure the sensor is actually sending data to the channel (e.g. on the ThingSpeak website).</li>
+          <li>If a widget says the quantity has not been set, turn on edit mode, tap it and choose a quantity.</li>
+        </ul>
+        <h4>Values are outdated</h4>
+        <p>Tap the sync icon. Data age also depends on how often the sensor reports. You can set automatic synchronisation in Settings.</p>
+        <h4>No alerts</h4>
+        <p>Check that the widget has its alarm switched on and the app is allowed to send notifications. For background checks see chapter 5 (on some phones they cannot be guaranteed).</p>
+        <h4>PRO purchase not applied</h4>
+        <p>Make sure you are signed in with the same Google account and tap “Restore previous purchase” in Settings.</p>
+        <p>Still stuck? Write to <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a>.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== Právní informace ===== -->
+  <section id="legal">
+    <h2 lang="cs">Soukromí a kontakt</h2><h2 lang="en">Privacy and contact</h2>
+    <p lang="cs"><a href="https://martasecek-dotcom.github.io/privacy-policy-DataView/">Zásady ochrany soukromí</a> · <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+    <p lang="en"><a href="https://martasecek-dotcom.github.io/privacy-policy-DataView/">Privacy policy</a> · <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../">← <span lang="cs">Všechny aplikace</span><span lang="en">All apps</span></a> · © 2026 Martin Palla</p>
+    <p class="small" lang="cs">DataView – Sensor Dashboard je nezávislá aplikace. ThingSpeak je ochranná známka společnosti The MathWorks, Inc.; aplikace není s touto společností spojena ani jí schválena. Google Play je ochranná známka společnosti Google LLC.</p>
+    <p class="small" lang="en">DataView – Sensor Dashboard is an independent app. ThingSpeak is a trademark of The MathWorks, Inc.; the app is not affiliated with or endorsed by that company. Google Play is a trademark of Google LLC.</p>
+  </div>
+</footer>
+
+</body>
+</html>

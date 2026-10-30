@@ -1,0 +1,136 @@
+/* ==========================================================
+   Společný styl webu (světlý/tmavý režim podle systému)
+   Bez externích písem a knihoven – jen systémová písma.
+   ========================================================== */
+
+/* --- Barevné proměnné: světlý režim --- */
+:root {
+  --bg: #f6f8f9;
+  --surface: #ffffff;
+  --text: #17222b;
+  --muted: #55646f;
+  --accent: #0b7a75;
+  --accent-text: #ffffff;
+  --border: #d9e1e6;
+  --soft: #e6f2f1;
+  --radius: 16px;
+  --shadow: 0 2px 12px rgba(0, 0, 0, .08);
+}
+
+/* --- Tmavý režim --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1619;
+    --surface: #182126;
+    --text: #e8eef1;
+    --muted: #9fb0ba;
+    --accent: #4fd1c5;
+    --accent-text: #06201e;
+    --border: #2a373e;
+    --soft: #1b2b2c;
+    --shadow: 0 2px 12px rgba(0, 0, 0, .5);
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.25; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+/* --- Přepínání jazyka: html[data-lang] řídí, co je vidět.
+       Bez JS se zobrazí obě verze pod sebou (viz noscript v HTML). --- */
+html[data-lang="cs"] [lang="en"]:not(html) { display: none !important; }
+html[data-lang="en"] [lang="cs"]:not(html) { display: none !important; }
+
+/* --- Horní lišta --- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.topbar .wrap { display: flex; align-items: center; gap: 12px; min-height: 56px; }
+.brand { font-weight: 700; text-decoration: none; color: var(--text); margin-right: auto; display: flex; align-items: center; gap: 10px; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.topbar nav a { margin-left: 14px; text-decoration: none; color: var(--muted); font-size: .95rem; }
+.topbar nav a:hover { color: var(--accent); }
+.lang button {
+  border: 1px solid var(--border); background: transparent; color: var(--text);
+  padding: 5px 10px; cursor: pointer; font: inherit; font-size: .85rem;
+}
+.lang button:first-child { border-radius: 8px 0 0 8px; }
+.lang button:last-child { border-radius: 0 8px 8px 0; border-left: 0; }
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+
+/* --- Hrdina (úvod stránky) --- */
+.hero { padding: 40px 0 24px; }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin: 0 0 8px; }
+.hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 720px; margin: 0 0 20px; }
+.hero-img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; }
+
+/* --- Tlačítka --- */
+.btn {
+  display: inline-block; padding: 11px 20px; border-radius: 999px; text-decoration: none;
+  background: var(--accent); color: var(--accent-text); font-weight: 600; margin: 4px 8px 4px 0;
+}
+.btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+
+/* --- Karty aplikací (hlavní stránka) --- */
+.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin: 16px 0 40px; }
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column;
+}
+.card .body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.card h3 { margin: 0; }
+.card p { margin: 0; color: var(--muted); }
+.card .actions { margin-top: auto; padding-top: 8px; }
+.card.soon { border-style: dashed; box-shadow: none; opacity: .75; }
+
+/* --- Sekce --- */
+section { padding: 28px 0; }
+section h2 { font-size: 1.6rem; margin: 0 0 12px; }
+.muted { color: var(--muted); }
+
+/* --- Funkce (mřížka) --- */
+.features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.feature { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
+.feature h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.feature p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+/* --- Galerie snímků (vodorovné posouvání) --- */
+.gallery { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 14px; scroll-snap-type: x mandatory; }
+.gallery figure { margin: 0; flex: 0 0 auto; width: 210px; scroll-snap-align: start; }
+.gallery img { border-radius: 14px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.gallery figcaption { font-size: .85rem; color: var(--muted); margin-top: 6px; }
+
+/* --- Obsah návodu a rozbalovací kapitoly --- */
+.toc { background: var(--soft); border-radius: var(--radius); padding: 14px 18px; }
+.toc ul { margin: 6px 0 0; padding-left: 20px; columns: 2 240px; }
+.toc a { text-decoration: none; }
+details {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  margin: 10px 0; padding: 0 16px;
+}
+details[open] { padding-bottom: 12px; }
+summary { cursor: pointer; font-weight: 600; padding: 12px 0; }
+details h4 { margin: 16px 0 4px; }
+details ol, details ul { padding-left: 22px; }
+.note { background: var(--soft); border-left: 4px solid var(--accent); padding: 10px 14px; border-radius: 8px; margin: 12px 0; }
+code { background: var(--soft); padding: 1px 6px; border-radius: 6px; font-size: .92em; }
+
+/* --- Patička --- */
+footer { border-top: 1px solid var(--border); margin-top: 24px; padding: 24px 0 40px; color: var(--muted); font-size: .88rem; }
+footer p { margin: 6px 0; }
+.small { font-size: .82rem; }
+
+@media (max-width: 560px) {
+  .topbar nav { display: none; }
+}
