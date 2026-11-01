@@ -50,6 +50,8 @@
         <p lang="cs">Graf průběhu, aktuální hodnota a historie měření.</p><p lang="en">Chart of the trend, current value and measurement history.</p></div>
       <div class="feature"><h3 lang="cs">Vlastní dashboard</h3><h3 lang="en">Custom dashboard</h3>
         <p lang="cs">Skládejte widgety (grafy a další) podle sebe pomocí editoru.</p><p lang="en">Build your own layout from widgets (charts and more) using the editor.</p></div>
+      <div class="feature"><h3 lang="cs">Ovládání</h3><h3 lang="en">Control</h3>
+        <p lang="cs">Posuvník, tlačítka, potenciometr či RGB barva odešlou hodnotu do ThingSpeaku nebo MQTT.</p><p lang="en">A slider, buttons, knob or RGB colour sends a value to ThingSpeak or MQTT.</p></div>
       <div class="feature"><h3 lang="cs">Alarmy</h3><h3 lang="en">Alarms</h3>
         <p lang="cs">Upozornění, když hodnota překročí nastavenou mez.</p><p lang="en">Get notified when a value crosses a limit you set.</p></div>
       <div class="feature"><h3 lang="cs">Světlý a tmavý režim</h3><h3 lang="en">Light and dark theme</h3>
@@ -89,6 +91,7 @@
         <li><a href="#g-pro"><span lang="cs">6. Reklamy, PRO a souhlas</span><span lang="en">6. Ads, PRO and consent</span></a></li>
         <li><a href="#g-settings"><span lang="cs">7. Nastavení a soukromí</span><span lang="en">7. Settings and privacy</span></a></li>
         <li><a href="#g-trouble"><span lang="cs">8. Řešení potíží</span><span lang="en">8. Troubleshooting</span></a></li>
+        <li><a href="#g-control"><span lang="cs">9. Ovládací widgety (odesílání dat)</span><span lang="en">9. Control widgets (sending data)</span></a></li>
       </ul>
     </nav>
 
@@ -435,6 +438,62 @@
         <h4>PRO purchase not applied</h4>
         <p>Make sure you are signed in with the same Google account and tap “Restore previous purchase” in Settings.</p>
         <p>Still stuck? Write to <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a>.</p>
+      </div>
+    </details>
+
+    <details id="g-control">
+      <summary><span lang="cs">9. Ovládací widgety (odesílání dat)</span><span lang="en">9. Control widgets (sending data)</span></summary>
+      <div lang="cs">
+        <p>Ovládací widgety umí z aplikace <strong>odeslat hodnotu</strong> do ThingSpeaku (zápis do pole kanálu) nebo na MQTT broker (publikace do topicu). Odesílá se jen na váš pokyn – nikdy automaticky.</p>
+        <h4>Příprava zdroje</h4>
+        <ul>
+          <li>ThingSpeak potřebuje <strong>Write API Key</strong> (jiný než Read API Key). Zadáte ho při přidání zdroje, nebo později v záložce Zdroje dat přes volbu „Zápis“.</li>
+          <li>Doporučujeme <strong>samostatný kanál či pole</strong> jen pro ovládání. Pole musí být zapnuté v nastavení kanálu (Channel Settings). Aplikace posílá vždy jen jedno pole.</li>
+          <li>U MQTT zvolíte topic a zda se zpráva uchová (retain).</li>
+        </ul>
+        <h4>Přidání widgetu</h4>
+        <p>V záložce Přehled klepněte na + a vyberte „Ovládací widget“. Typy: <strong>posuvník</strong>, <strong>tlačítka</strong>, <strong>potenciometr</strong> a <strong>RGB barva</strong> (potenciometr a RGB jsou prvky PRO). RGB se odesílá jako jedno číslo 0–16 777 215 (R×65536 + G×256 + B).</p>
+        <h4>Nastavení</h4>
+        <ul>
+          <li>rozsah a krok (posuvník, potenciometr), jednotka; u tlačítek text, hodnota a barva každého tlačítka a počet tlačítek na řádek (1–3),</li>
+          <li><strong>potvrzovací dialog</strong> před odesláním – ve výchozím stavu zapnutý, při vypnutí aplikace upozorní,</li>
+          <li>synchronizace náhledu s hodnotou z kanálu (stejný kanál, nebo jiný) a zobrazení času poslední aktualizace,</li>
+          <li><strong>zámek</strong> proti nechtěnému ovládání.</li>
+        </ul>
+        <h4>Odpočet 15 s</h4>
+        <p>Bezplatný ThingSpeak přijme zápis nejvýše jednou za 15 s. Aplikace proto po odeslání krátce blokuje další odeslání do téhož zdroje. Odpočet lze u zdroje vypnout (Zdroje dat → Zápis).</p>
+        <h4>Když odeslání selže</h4>
+        <ul>
+          <li><strong>Neprovedeno – OFFLINE:</strong> bez připojení se nic neodešle. Hodnota se <strong>neodkládá</strong> a později se neodešle sama; použijte „Zopakovat“.</li>
+          <li><strong>Server odeslání odmítl:</strong> v závorce je kód odpovědi. Zkontrolujte, že používáte Write (ne Read) API Key, že je pole v kanálu zapnuté a že neodesíláte častěji než za 15 s.</li>
+        </ul>
+        <p><strong>Upozornění:</strong> aplikace není určena k ovládání bezpečnostně kritických zařízení. Doručení příkazu nelze zaručit (síť, server, limity služby) a za nastavení a následky ovládání odpovídáte vy.</p>
+      </div>
+      <div lang="en">
+        <p>Control widgets <strong>send a value</strong> from the app to ThingSpeak (writing to a channel field) or to an MQTT broker (publishing to a topic). Values are sent only when you ask – never automatically.</p>
+        <h4>Preparing the source</h4>
+        <ul>
+          <li>ThingSpeak needs a <strong>Write API Key</strong> (different from the Read API Key). Enter it when adding the source, or later in the Data sources tab via “Write”.</li>
+          <li>We recommend a <strong>separate channel or field</strong> just for control. The field must be enabled in Channel Settings. The app sends one field at a time.</li>
+          <li>For MQTT choose the topic and whether the message is retained.</li>
+        </ul>
+        <h4>Adding a widget</h4>
+        <p>In the Overview tab tap + and choose “Control widget”. Types: <strong>slider</strong>, <strong>buttons</strong>, <strong>potentiometer</strong> and <strong>RGB colour</strong> (potentiometer and RGB are PRO items). RGB is sent as a single number 0–16,777,215 (R×65536 + G×256 + B).</p>
+        <h4>Settings</h4>
+        <ul>
+          <li>range and step (slider, potentiometer), unit; for buttons the label, value and colour of each button and the number of buttons per row (1–3),</li>
+          <li><strong>confirmation dialog</strong> before sending – on by default; the app warns you when you switch it off,</li>
+          <li>preview synchronisation with the channel value (same channel or another) and display of the last update time,</li>
+          <li><strong>lock</strong> against accidental use.</li>
+        </ul>
+        <h4>15-second countdown</h4>
+        <p>Free ThingSpeak accepts a write at most once every 15 seconds, so the app briefly blocks further sending to the same source. You can turn the countdown off per source (Data sources → Write).</p>
+        <h4>When sending fails</h4>
+        <ul>
+          <li><strong>Not done – OFFLINE:</strong> without a connection nothing is sent. The value is <strong>not queued</strong> and will not be sent later on its own; use “Retry”.</li>
+          <li><strong>Server rejected the send:</strong> the response code is shown in brackets. Check that you use the Write (not Read) API Key, that the field is enabled in the channel and that you are not sending more often than every 15 s.</li>
+        </ul>
+        <p><strong>Notice:</strong> the app is not intended for controlling safety-critical devices. Delivery of a command cannot be guaranteed (network, server, service limits) and you are responsible for the setup and the consequences of controlling.</p>
       </div>
     </details>
   </section>
