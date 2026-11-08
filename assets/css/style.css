@@ -126,6 +126,15 @@ details ol, details ul { padding-left: 22px; }
 .note { background: var(--soft); border-left: 4px solid var(--accent); padding: 10px 14px; border-radius: 8px; margin: 12px 0; }
 code { background: var(--soft); padding: 1px 6px; border-radius: 6px; font-size: .92em; }
 
+/* --- Kontakt / údaje o provozovateli --- */
+.contact-box {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 6px 20px 14px; margin-top: 16px; max-width: 720px;
+}
+.contact-box h3 { font-size: 1.05rem; margin: 16px 0 6px; }
+.contact-box address { font-style: normal; line-height: 1.6; }
+.contact-box p { margin: 6px 0; }
+
 /* --- Patička --- */
 footer { border-top: 1px solid var(--border); margin-top: 24px; padding: 24px 0 40px; color: var(--muted); font-size: .88rem; }
 footer p { margin: 6px 0; }
