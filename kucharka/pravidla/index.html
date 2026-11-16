@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moje recepty – kuchařka – pravidla používání</title>
+<meta name="description" content="Pravidla používání aplikace Moje recepty – kuchařka. Terms of use of the My Recipes – Cookbook app.">
+<link rel="icon" href="../../assets/img/kucharka/favicon.png">
+<style>
+  /* Barvy podle barevného ladění aplikace (Terakota); tmavý režim podle systému. */
+  :root {
+    --bg: #fbf8f3;
+    --card: #ffffff;
+    --text: #23211f;
+    --muted: #6b665f;
+    --line: #e7e1d8;
+    --accent: #b5562f;
+    --accent-soft: #f9ece4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17161a;
+      --card: #201f24;
+      --text: #ecebea;
+      --muted: #a5a19b;
+      --line: #34323a;
+      --accent: #f0a27c;
+      --accent-soft: #33261f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 8px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo { font-size: 40px; line-height: 1; }
+  img.logo { width: 40px; height: 40px; border-radius: 10px; }
+  .brand h1 { margin: 0; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .brand p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .lang button {
+    border: 0; background: transparent; color: var(--muted);
+    padding: 6px 14px; font: inherit; font-size: 0.9rem; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+  nav.toc {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 16px 0 24px;
+    font-size: 0.95rem;
+  }
+  nav.toc a { color: var(--text); margin-right: 16px; white-space: nowrap; }
+  section.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 8px 24px 16px;
+    margin-bottom: 24px;
+  }
+  h2 { font-size: 1.3rem; margin: 20px 0 4px; }
+  h3 { font-size: 1.05rem; margin: 22px 0 4px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 1.2em; }
+  li { margin: 4px 0; }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.93rem; margin: 8px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 0.85rem; }
+  body:not(.en) [lang="en"] { display: none; }
+  body.en [lang="cs"] { display: none; }
+  @media (max-width: 520px) { section.card { padding: 4px 16px 12px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img class="logo" src="../../assets/img/kucharka/favicon.png" alt="" width="40" height="40">
+    <div>
+      <h1 lang="cs">Moje recepty – kuchařka</h1>
+      <h1 lang="en">My Recipes – Cookbook</h1>
+      <p lang="cs">Pravidla používání</p>
+      <p lang="en">Terms of use</p>
+    </div>
+  </div>
+  <div class="lang" role="group" aria-label="Jazyk / Language">
+    <button type="button" data-lang="cs" aria-pressed="true">Čeština</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ ČESKY ============================ -->
+<div lang="cs">
+  <p class="muted">Platné od 16. 11. 2026 · verze 1</p>
+  <nav class="toc">
+    <a href="#pravidla">Pravidla používání</a>
+    <a href="#autorska-prava">Autorská práva a nahlášení obsahu</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="https://martasecek-dotcom.github.io/privacy-policy-moje-recepty-kucharka/?lang=cs">Zásady ochrany soukromí</a>
+  </nav>
+
+  <p>Tato pravidla platí pro aplikaci <strong>Moje recepty – kuchařka</strong> pro Android. Před prvním použitím funkcí, kterými obsah odchází z vašeho telefonu k ostatním (přezdívka, sdílení kódem, přátelé, veřejný katalog), je aplikace zobrazí a vy je musíte přijmout. Bez souhlasu můžete aplikaci dál používat jen ve svém telefonu – recepty, vaření, nákup, spíž i záloha do souboru fungují. Jak zpracováváme osobní údaje, popisují samostatné <a href="https://martasecek-dotcom.github.io/privacy-policy-moje-recepty-kucharka/?lang=cs">zásady ochrany soukromí</a>.</p>
+
+  <section class="card" id="pravidla">
+    <h2>Pravidla používání</h2>
+    <p>Přijetím pravidel v aplikaci souhlasíte s následujícím:</p>
+    <ul>
+      <li>Aplikaci používáte pro osobní potřebu a neporušujete zákony ani práva ostatních.</li>
+      <li>Sdílejte a zveřejňujte jen recepty, které jste sami vymysleli nebo celé napsali vlastními slovy, nebo recepty od rodiny či přátel s jejich souhlasem.</li>
+      <li>Nesdílejte recepty z kuchařek, časopisů ani webových stránek – jsou chráněné autorským právem, a to ani vyfocené, přepsané nebo jen mírně upravené. Takové recepty si můžete ukládat jen pro osobní potřebu, pokud to dovoluje právo vaší země.</li>
+      <li>Nezveřejňujte sprostý, urážlivý, nenávistný, sexuální, násilný ani reklamní obsah – ani v přezdívce, názvu, popisu či postupu receptu.</li>
+      <li>Nepoužívejte cizí jména, značky ani obsah chráněný autorským právem bez svolení.</li>
+      <li><strong>Za obsah, který sdílíte nebo zveřejníte, odpovídáte výhradně vy.</strong> Pokud nasdílíte nebo zveřejníte recept, který porušuje autorská práva nebo jiná práva třetích osob, nesete veškeré právní následky sami – včetně případných nároků autorů na odstranění, odškodnění nebo náhradu škody. Provozovatel aplikace takový obsah nevytváří ani předem nekontroluje a za něj neodpovídá; po upozornění ho bez zbytečného odkladu skryje nebo odstraní.</li>
+      <li>Než recept nasdílíte, zveřejníte nebo označíte jako volný, zvažte to: <strong>kopie, které už ostatní dostali, nejde vzít zpět</strong> (viz <a href="https://martasecek-dotcom.github.io/privacy-policy-moje-recepty-kucharka/#smazani">Smazání dat</a>).</li>
+      <li>Zveřejněním nám dáváte bezplatné, nevýhradní svolení tento obsah v aplikaci zobrazovat ostatním uživatelům, dokud ho neodeberete.</li>
+      <li>Nevhodný recept může kdokoli nahlásit. Po několika nahlášeních se recept automaticky skryje. Obsah, který porušuje pravidla, můžeme skrýt nebo smazat a uživateli můžeme omezit veřejné sdílení; o odblokování lze požádat v aplikaci.</li>
+      <li>Veřejný katalog není dostupný ve všech zemích (např. v USA). Sdílení kódem, souborem a s přáteli funguje všude.</li>
+      <li>Nezneužívejte chyby aplikace a nepokoušejte se narušit server.</li>
+      <li>Aplikace se může měnit, online funkce mohou být dočasně nedostupné. Aplikaci poskytujeme „tak, jak je“, v rozsahu, jaký zákon dovoluje.</li>
+      <li>Pravidla můžeme změnit. Při podstatné změně vás aplikace požádá o nový souhlas.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="autorska-prava">
+    <h2>Autorská práva a nahlášení obsahu</h2>
+    <p>Recepty ve veřejném katalogu a recepty sdílené mezi uživateli vytvářejí uživatelé. Respektujeme autorská a jiná práva a očekáváme to i od uživatelů. Pokud se domníváte, že recept, jeho název, popis nebo přezdívka uživatele porušuje vaše autorská práva nebo je jinak protiprávní, dejte nám vědět.</p>
+    <h3>Jak nahlásit</h3>
+    <ul>
+      <li><strong>V aplikaci:</strong> u receptu z katalogu nebo přijatého od jiného uživatele klepněte na ikonu vlajky a vyberte důvod.</li>
+      <li><strong>E-mailem</strong> na <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> s předmětem „Autorská práva“ nebo „Nahlášení obsahu“. Uveďte prosím:
+        <ul>
+          <li>své jméno a kontakt (e-mail, případně adresu),</li>
+          <li>o jaké dílo nebo právo jde (např. název kuchařky, odkaz na webovou stránku s originálem),</li>
+          <li>který obsah v aplikaci je problémový – název receptu a přezdívku autora (případně snímek obrazovky),</li>
+          <li>proč je obsah podle vás protiprávní,</li>
+          <li>prohlášení, že jednáte v dobré víře, že údaje jsou pravdivé a že jste vlastníkem práv nebo jste oprávněni jednat jeho jménem, a svůj podpis (stačí elektronický – celé jméno).</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Co uděláme</h3>
+    <ul>
+      <li>Oznámení posoudíme bez zbytečného odkladu. Obsah, který porušuje práva nebo tato pravidla, skryjeme nebo smažeme. Po několika nahlášeních od uživatelů se recept skryje automaticky.</li>
+      <li>Autor uvidí, že jeho recept byl skryt. Pokud nesouhlasí, může nám napsat na stejný e-mail s vysvětlením (protioznámení); jeho vyjádření posoudíme a případně obsah obnovíme. O výsledku informujeme toho, kdo obsah nahlásil, i autora.</li>
+      <li>Uživatelům, kteří opakovaně porušují práva ostatních nebo tato pravidla, zablokujeme veřejné sdílení.</li>
+      <li>Vědomě nepravdivá oznámení mohou mít právní následky.</li>
+    </ul>
+    <p>Kontaktní místo pro úřady a uživatele podle nařízení EU o digitálních službách (DSA): <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> (česky nebo anglicky).</p>
+  </section>
+
+  <section class="card" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Martin Palla – vývojář aplikace Moje recepty – kuchařka<br>Podnikající fyzická osoba, IČO: 30260957<br>Sadová 1520, 769 01 Holešov, Česká republika<br>E-mail: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</div>
+
+<!-- ============================ ENGLISH ============================ -->
+<div lang="en">
+  <p class="muted">Effective from 16 November 2026 · version 1</p>
+  <nav class="toc">
+    <a href="#terms">Terms of use</a>
+    <a href="#copyright">Copyright and content reports</a>
+    <a href="#contact">Contact</a>
+    <a href="https://martasecek-dotcom.github.io/privacy-policy-moje-recepty-kucharka/?lang=en">Privacy policy</a>
+  </nav>
+
+  <p>These terms apply to the <strong>My Recipes – Cookbook</strong> app for Android. Before you first use features through which content leaves your phone for other people (nickname, sharing by code, friends, public catalogue), the app shows them and you must accept them. Without accepting, you can still use the app on your own phone – recipes, cooking, shopping, pantry and backup to a file all work. How we process personal data is described in the separate <a href="https://martasecek-dotcom.github.io/privacy-policy-moje-recepty-kucharka/?lang=en">privacy policy</a>.</p>
+
+  <section class="card" id="terms">
+    <h2>Terms of use</h2>
+    <p>By accepting the terms in the app you agree to the following:</p>
+    <ul>
+      <li>You use the app for personal purposes and do not break the law or the rights of others.</li>
+      <li>Share and publish only recipes you created yourself or wrote entirely in your own words, or recipes from family or friends with their consent.</li>
+      <li>Do not share recipes from cookbooks, magazines or websites – they are protected by copyright, even photographed, retyped or only slightly modified. You may keep such recipes for personal use only, where the law of your country allows it.</li>
+      <li>Do not publish vulgar, offensive, hateful, sexual, violent or advertising content – not in your nickname, nor in a recipe's name, description or steps.</li>
+      <li>Do not use other people’s names, brands or copyrighted content without permission.</li>
+      <li><strong>You alone are responsible for content you share or publish.</strong> If you share or publish a recipe that infringes copyright or other third-party rights, you bear all legal consequences yourself – including any claims by the authors for removal, compensation or damages. The operator of the app does not create or pre-check such content and is not liable for it; upon notice, it will hide or remove it without undue delay.</li>
+      <li>Think before you share, publish or mark a recipe as free: <strong>copies others have already received cannot be withdrawn</strong> (see <a href="https://martasecek-dotcom.github.io/privacy-policy-moje-recepty-kucharka/#delete">Data deletion</a>).</li>
+      <li>By publishing content you give us a free, non-exclusive permission to show it to other users in the app until you remove it.</li>
+      <li>Anyone can report an inappropriate recipe. After several reports a recipe is hidden automatically. We may hide or delete content that breaks these terms and restrict a user's public sharing; an unblock request can be sent in the app.</li>
+      <li>The public catalogue is not available in all countries (e.g. the USA). Sharing by code, by file and with friends works everywhere.</li>
+      <li>Do not exploit bugs or try to disrupt the server.</li>
+      <li>The app may change and online features may be temporarily unavailable. The app is provided “as is” to the extent permitted by law.</li>
+      <li>We may change these terms. If they change significantly, the app will ask you to accept them again.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="copyright">
+    <h2>Copyright and content reports</h2>
+    <p>Recipes in the public catalogue and recipes shared between users are created by users. We respect copyright and other rights and expect users to do the same. If you believe that a recipe, its name, description or a user's nickname infringes your copyright or is otherwise unlawful, let us know.</p>
+    <h3>How to report</h3>
+    <ul>
+      <li><strong>In the app:</strong> on a recipe from the catalogue or received from another user, tap the flag icon and choose a reason.</li>
+      <li><strong>By e-mail</strong> to <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> with the subject “Copyright” or “Content report”. Please include:
+        <ul>
+          <li>your name and contact details (e-mail, or an address),</li>
+          <li>which work or right is concerned (e.g. the cookbook title, a link to the web page with the original),</li>
+          <li>which content in the app is affected – the recipe name and the author's nickname (or a screenshot),</li>
+          <li>why you believe the content is unlawful,</li>
+          <li>a statement that you act in good faith, that the information is accurate and that you are the rights holder or authorised to act on their behalf, and your signature (an electronic one – your full name – is enough).</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>What we do</h3>
+    <ul>
+      <li>We review notices without undue delay. Content that infringes rights or these terms is hidden or deleted. After several reports from users a recipe is hidden automatically.</li>
+      <li>The author sees that their recipe has been hidden. If they disagree, they can write to the same e-mail with an explanation (counter-notice); we review it and may restore the content. We inform both the reporter and the author about the outcome.</li>
+      <li>Users who repeatedly infringe the rights of others or these terms will have public sharing blocked.</li>
+      <li>Knowingly false notices may have legal consequences.</li>
+    </ul>
+    <p>Point of contact for authorities and users under the EU Digital Services Act (DSA): <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> (Czech or English).</p>
+  </section>
+
+  <section class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Martin Palla – developer of My Recipes – Cookbook<br>Sole trader, company ID (IČO): 30260957<br>Sadová 1520, 769 01 Holešov, Czech Republic<br>E-mail: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <span lang="cs"><a href="../">Stránka aplikace</a> · <a href="../../">Všechny aplikace</a> · © 2026 Martin Palla</span>
+  <span lang="en"><a href="../">App page</a> · <a href="../../">All apps</a> · © 2026 Martin Palla</span>
+</footer>
+
+<script>
+  var enAnchors = ['terms', 'copyright', 'contact'];
+  var csAnchors = ['pravidla', 'autorska-prava', 'kontakt'];
+
+  function setLang(lang) {
+    document.body.classList.toggle('en', lang === 'en');
+    document.documentElement.lang = lang;
+    document.title = lang === 'en'
+      ? 'My Recipes – Cookbook – terms of use'
+      : 'Moje recepty – kuchařka – pravidla používání';
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.lang); });
+  });
+
+  // Jazyk: ?lang=en / #terms… → angličtina, #pravidla… → čeština,
+  // jinak dřívější volba, jinak jazyk prohlížeče.
+  var q = new URLSearchParams(location.search).get('lang');
+  var hash = location.hash.replace('#', '');
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var lang = q === 'en' || q === 'cs' ? q
+    : enAnchors.indexOf(hash) >= 0 ? 'en'
+    : csAnchors.indexOf(hash) >= 0 ? 'cs'
+    : saved || ((navigator.language || 'cs').toLowerCase().indexOf('cs') === 0 ? 'cs' : 'en');
+  setLang(lang);
+  if (hash) { var t = document.getElementById(hash); if (t) t.scrollIntoView(); }
+</script>
+</body>
+</html>
