@@ -1,0 +1,272 @@
+<!doctype html>
+<!-- Lezouni – Lezouni – pravidla používání. Stejný vzhled jako stránky ostatních aplikací (Mood Swing), jen zelená barva. -->
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lezouni – pravidla používání</title>
+<meta name="description" content="Pravidla používání hry Lezouni. Terms of use of the Lezouni game.">
+<style>
+  :root {
+    --bg: #f6faf2;
+    --card: #ffffff;
+    --text: #1f2a1c;
+    --muted: #5f6b58;
+    --line: #dde8d4;
+    --accent: #3e8f33;
+    --accent-soft: #e6f3dd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a13;
+      --card: #1c241a;
+      --text: #e8efe4;
+      --muted: #a3b09b;
+      --line: #2f3b2b;
+      --accent: #84d474;
+      --accent-soft: #223020;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 8px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo { font-size: 40px; line-height: 1; }
+  .brand h1 { margin: 0; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .brand p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .lang button {
+    border: 0; background: transparent; color: var(--muted);
+    padding: 6px 14px; font: inherit; font-size: 0.9rem; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+  nav.toc {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 16px 0 24px;
+    font-size: 0.95rem;
+  }
+  nav.toc a { color: var(--text); margin-right: 16px; white-space: nowrap; }
+  section.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 8px 24px 16px;
+    margin-bottom: 24px;
+  }
+  h2 { font-size: 1.3rem; margin: 20px 0 4px; }
+  h3 { font-size: 1.05rem; margin: 22px 0 4px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 1.2em; }
+  li { margin: 4px 0; }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.93rem; margin: 8px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 0.85rem; }
+  body:not(.en) [lang="en"] { display: none; }
+  body.en [lang="cs"] { display: none; }
+  @media (max-width: 520px) { section.card { padding: 4px 16px 12px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden="true">🐛</div>
+    <div>
+      <h1>Lezouni</h1>
+      <p lang="cs">Pravidla používání</p>
+      <p lang="en">Terms of use</p>
+    </div>
+  </div>
+  <div class="lang" role="group" aria-label="Jazyk / Language">
+    <button type="button" data-lang="cs" aria-pressed="true">Čeština</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ ČESKY ============================ -->
+<div lang="cs">
+  <p class="muted">Platné od 17. 11. 2026 · verze 1</p>
+  <nav class="toc">
+    <a href="#pravidla">Pravidla používání</a>
+    <a href="#autorska-prava">Autorská práva a nahlášení obsahu</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="https://martasecek-dotcom.github.io/privacy-policy-Lezouni/?lang=cs">Zásady ochrany soukromí</a>
+  </nav>
+
+  <p>Tato pravidla platí pro hru <strong>Lezouni</strong> pro Android, zejména pro funkce, ve kterých hráči zveřejňují obsah: přezdívka, žebříčky a <strong>Levely hráčů</strong> (zveřejňování, hraní, hodnocení a nahlašování levelů). Před prvním otevřením Levelů hráčů nebo před prvním zveřejněním levelu je hra zobrazí a vy je musíte přijmout tlačítkem „Souhlasím“. Kampaň a denní výzvu lze hrát i bez souhlasu. Jak zpracováváme osobní údaje, popisují samostatné <a href="https://martasecek-dotcom.github.io/privacy-policy-Lezouni/?lang=cs">zásady ochrany soukromí</a>.</p>
+
+  <section class="card" id="pravidla">
+    <h2>Pravidla používání</h2>
+    <p>Přijetím pravidel ve hře souhlasíte s následujícím:</p>
+    <ul>
+      <li>Hru používáte pro osobní zábavu a neporušujete zákony ani práva ostatních.</li>
+      <li>Zveřejňujte jen <strong>vlastní tvorbu</strong>. Nezveřejňujte sprostý, urážlivý, nenávistný, diskriminační, sexuální, násilný ani zkopírovaný obsah – ani v přezdívce nebo názvu levelu, ani jako obrázek „nakreslený“ z červíků a prvků na ploše.</li>
+      <li>Nepoužívejte cizí postavičky, loga, značky ani jiný obsah chráněný právem bez svolení. Do přezdívek a názvů nepište osobní ani kontaktní údaje, reklamu ani odkazy.</li>
+      <li>Přezdívky a názvy levelů procházejí automatickým filtrem nevhodných slov. Filtr nemusí zachytit vše – za obsah, který zveřejníte, odpovídáte vy.</li>
+      <li>Zveřejněním levelu nám dáváte bezplatné, nevýhradní, celosvětové svolení level ve hře uchovávat a zobrazovat ostatním hráčům, dokud ho nestáhnete ze zveřejnění (Levely hráčů → Moje) nebo nesmažete účet.</li>
+      <li>Nevhodný level nebo přezdívku může kdokoli nahlásit, každý hráč jednou. Po 3 nahlášeních se level nebo přezdívka automaticky skryje. Autora, který vám vadí, si můžete zablokovat – jeho levely pak neuvidíte vy.</li>
+      <li>Obsah, který porušuje pravidla, můžeme skrýt nebo odstranit; autor se v aplikaci dozví, který level byl odstraněn a proč. Hráči, kterému byly odstraněny 3 levely, můžeme zveřejňování trvale zakázat.</li>
+      <li>Nezneužívejte chyby hry, nemanipulujte se žebříčky ani hodnocením (např. hodnocení vlastních levelů z dalších účtů) a nepokoušejte se narušit server.</li>
+      <li>Mince a oblečky ve hře nemají skutečnou peněžní hodnotu a nelze je směnit za peníze. Za dohrání cizího levelu získáte 1 minci za každou hvězdičku navíc; autor získává mince podle hodnocení svých levelů (nejvýš 50 čekajících na výběr).</li>
+      <li>Hra se může měnit, online funkce mohou být dočasně nedostupné. Hru poskytujeme „tak, jak je“, v rozsahu, jaký zákon dovoluje.</li>
+      <li>Pravidla můžeme změnit. Při podstatné změně vás hra požádá o nový souhlas. Pravidla se řídí právem České republiky.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="autorska-prava">
+    <h2>Autorská práva a nahlášení obsahu</h2>
+    <p>Levely v Levelech hráčů vytvářejí hráči. Respektujeme autorská a jiná práva a očekáváme to i od hráčů. Pokud se domníváte, že level, jeho název nebo přezdívka hráče porušuje vaše autorská práva nebo je jinak protiprávní, dejte nám vědět – i bez účtu ve hře.</p>
+    <h3>Jak nahlásit</h3>
+    <ul>
+      <li><strong>Ve hře:</strong> v Levelech hráčů ťukněte na level → „Nahlásit level“ a vyberte důvod (nevhodný název, nevhodný obsah, porušuje autorská práva, nejde dohrát). Přezdívku nahlásíte volbou „Nahlásit přezdívku autora“ nebo v žebříčku.</li>
+      <li><strong>E-mailem</strong> na <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> s předmětem „Autorská práva“ nebo „Nahlášení obsahu“. Uveďte prosím:
+        <ul>
+          <li>své jméno a kontakt (e-mail, případně adresu),</li>
+          <li>o jaké dílo nebo právo jde (u autorského díla jeho popis nebo odkaz na originál),</li>
+          <li>který obsah ve hře je problémový – název levelu a přezdívku autora (případně snímek obrazovky),</li>
+          <li>proč je obsah podle vás protiprávní,</li>
+          <li>prohlášení, že jednáte v dobré víře, že údaje jsou pravdivé a že jste vlastníkem práv nebo jste oprávněni jednat jeho jménem, a svůj podpis (stačí elektronický – celé jméno).</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Co uděláme</h3>
+    <ul>
+      <li>Oznámení posoudíme bez zbytečného odkladu. Obsah, který porušuje práva nebo tato pravidla, skryjeme nebo odstraníme.</li>
+      <li>Autor v aplikaci uvidí, že jeho level byl odstraněn, a důvod. Pokud nesouhlasí, může nám napsat na stejný e-mail s vysvětlením (protioznámení); jeho vyjádření posoudíme a případně obsah obnovíme. O výsledku informujeme toho, kdo obsah nahlásil, i autora.</li>
+      <li>Hráčům, kteří opakovaně porušují práva ostatních nebo tato pravidla, zakážeme zveřejňování levelů.</li>
+      <li>Vědomě nepravdivá oznámení mohou mít právní následky.</li>
+    </ul>
+    <p>Kontaktní místo pro úřady a uživatele podle nařízení EU o digitálních službách (DSA): <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> (česky nebo anglicky).</p>
+  </section>
+
+  <section class="card" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Martin Palla – vývojář hry Lezouni<br>Podnikající fyzická osoba, IČO: 30260957<br>Sadová 1520, 769 01 Holešov, Česká republika<br>E-mail: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</div>
+
+<!-- ============================ ENGLISH ============================ -->
+<div lang="en">
+  <p class="muted">Effective from 17 November 2026 · version 1</p>
+  <nav class="toc">
+    <a href="#terms">Terms of use</a>
+    <a href="#copyright">Copyright and content reports</a>
+    <a href="#contact">Contact</a>
+    <a href="https://martasecek-dotcom.github.io/privacy-policy-Lezouni/?lang=en">Privacy policy</a>
+  </nav>
+
+  <p>These terms apply to the <strong>Lezouni</strong> game for Android, especially to the features where players publish content: nickname, leaderboards and <strong>Player levels</strong> (publishing, playing, rating and reporting levels). Before you first open Player levels or publish a level, the game shows them and you must accept them by tapping “I agree”. The campaign and the daily challenge can be played without accepting. How we process personal data is described in the separate <a href="https://martasecek-dotcom.github.io/privacy-policy-Lezouni/?lang=en">privacy policy</a>.</p>
+
+  <section class="card" id="terms">
+    <h2>Terms of use</h2>
+    <p>By accepting the terms in the game you agree to the following:</p>
+    <ul>
+      <li>You use the game for personal entertainment and do not break the law or the rights of others.</li>
+      <li>Publish only <strong>your own work</strong>. Do not publish vulgar, offensive, hateful, discriminatory, sexual, violent or copied content – not in your nickname or level name, and not as a picture “drawn” from worms and items on the board.</li>
+      <li>Do not use other people’s characters, logos, brands or other protected content without permission. Do not put personal or contact details, ads or links in nicknames and names.</li>
+      <li>Nicknames and level names are checked by an automatic filter for inappropriate words. The filter may not catch everything – you are responsible for content you publish.</li>
+      <li>By publishing a level you give us a free, non-exclusive, worldwide permission to store it and show it to other players in the game until you unpublish it (Player levels → Mine) or delete your account.</li>
+      <li>Anyone can report an inappropriate level or nickname, each player once. After 3 reports the level or nickname is hidden automatically. You can block an author you don’t want to see – their levels are then hidden for you.</li>
+      <li>We may hide or remove content that breaks these terms; the author is told in the app which level was removed and why. Players who had 3 levels removed may be permanently banned from publishing.</li>
+      <li>Do not exploit bugs, manipulate leaderboards or ratings (e.g. rating your own levels from other accounts) or try to disrupt the server.</li>
+      <li>Coins and outfits have no real monetary value and cannot be exchanged for money. Completing another player’s level earns 1 coin per extra star; authors earn coins from ratings of their levels (up to 50 waiting to be collected).</li>
+      <li>The game may change and online features may be temporarily unavailable. The game is provided “as is” to the extent permitted by law.</li>
+      <li>We may change these terms. If the change is significant, the game will ask for your consent again. These terms are governed by Czech law.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="copyright">
+    <h2>Copyright and content reports</h2>
+    <p>Levels in Player levels are created by players. We respect copyright and other rights and expect players to do the same. If you believe that a level, its name or a player’s nickname infringes your copyright or is otherwise unlawful, please let us know – no game account needed.</p>
+    <h3>How to report</h3>
+    <ul>
+      <li><strong>In the game:</strong> in Player levels tap the level → “Report level” and choose a reason (inappropriate name, inappropriate content, copyright infringement, can’t be completed). Report a nickname with “Report author’s nickname” or in the leaderboard.</li>
+      <li><strong>By e-mail</strong> to <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> with the subject “Copyright” or “Content report”. Please include:
+        <ul>
+          <li>your name and contact details (e-mail, and address if possible),</li>
+          <li>the work or right concerned (for a copyrighted work, a description of it or a link to the original),</li>
+          <li>the content in the game you are reporting – the level name and the author’s nickname (or a screenshot),</li>
+          <li>why you believe the content is unlawful,</li>
+          <li>a statement that you are acting in good faith, that the information is accurate and that you are the rights owner or authorised to act on their behalf, and your signature (an electronic one – your full name – is enough).</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>What we do</h3>
+    <ul>
+      <li>We review notices without undue delay. Content that infringes rights or these terms is hidden or removed.</li>
+      <li>The author sees in the app that their level was removed and why. If they disagree, they can e-mail us at the same address with an explanation (counter-notice); we will review it and may restore the content. We inform both the reporter and the author about the outcome.</li>
+      <li>Players who repeatedly infringe the rights of others or these terms will be banned from publishing levels.</li>
+      <li>Knowingly false notices may have legal consequences.</li>
+    </ul>
+    <p>Point of contact for authorities and users under the EU Digital Services Act (DSA): <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> (Czech or English).</p>
+  </section>
+
+  <section class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Martin Palla – developer of Lezouni<br>Sole trader, company ID (IČO): 30260957<br>Sadová 1520, 769 01 Holešov, Czech Republic<br>E-mail: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <span lang="cs">© 2026 Martin Palla · Lezouni</span>
+  <span lang="en">© 2026 Martin Palla · Lezouni</span>
+</footer>
+
+<script>
+  var enAnchors = ['terms', 'copyright', 'contact'];
+  var csAnchors = ['pravidla', 'autorska-prava', 'kontakt'];
+
+  function setLang(lang) {
+    document.body.classList.toggle('en', lang === 'en');
+    document.documentElement.lang = lang;
+    document.title = lang === 'en' ? 'Lezouni – terms of use' : 'Lezouni – pravidla používání';
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.lang); });
+  });
+
+  // Jazyk: ?lang=en / anglická kotva → angličtina, česká kotva → čeština,
+  // jinak dřívější volba, jinak jazyk prohlížeče.
+  var q = new URLSearchParams(location.search).get('lang');
+  var hash = location.hash.replace('#', '');
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var lang = q === 'en' || q === 'cs' ? q
+    : enAnchors.indexOf(hash) >= 0 ? 'en'
+    : csAnchors.indexOf(hash) >= 0 ? 'cs'
+    : saved || ((navigator.language || 'cs').toLowerCase().indexOf('cs') === 0 ? 'cs' : 'en');
+  setLang(lang);
+  if (hash) { var t = document.getElementById(hash); if (t) t.scrollIntoView(); }
+</script>
+</body>
+</html>
